@@ -1,0 +1,115 @@
+/* Tampilan Body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+    background-size: cover;
+    color: white;
+  }
+  
+  /* Container utama */
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  /* Judul Halaman */
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Label */
+  label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  /* Input dan textarea */
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+  }
+  
+  /* Tombol */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Hasil Perkiraan */
+  .result {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #333; /* Menambahkan warna teks gelap untuk hasil perkiraan */
+  }
+  
+  /* Hasil Perkiraan dengan bayangan teks */
+  .result-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .result-row .label {
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks untuk label */
+  }
+  
+  .result-row span {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Bayangan teks untuk hasil perkiraan */
+  }
+  
+  /* Peringatan */
+  .peringatan {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: red;
+  }
+  
+  /* Menambah bayangan teks di seluruh body */
+  body {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Bayangan untuk teks di body */
+  }
+  /* Perkiraan Rendah dan Perkiraan Tinggi */
+#rendah {
+    color: #28a745; /* Warna hijau untuk perkiraan rendah */
+    font-weight: bold;
+  }
+  
+  #tinggi {
+    color: #dc3545; /* Warna merah untuk perkiraan tinggi */
+    font-weight: bold;
+  }
+  
+  

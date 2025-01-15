@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Perkiraan Gula Darah</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hasil Perkiraan Gula Darah</h1>
+      <div class="result">
+        <div class="result-row">
+          <span class="label">Waktu Tes:</span>
+          <span id="waktuHasil"></span>
+        </div>
+        <div class="result-row">
+          <span class="label">Jam Tes:</span>
+          <span id="jamTes"></span>
+        </div>
+        <div class="result-row">
+          <span class="label">Perkiraan Rendah:</span>
+          <span id="rendah"></span>
+        </div>
+        <div class="result-row">
+          <span class="label">Perkiraan Tinggi:</span>
+          <span id="tinggi"></span>
+        </div>
+        <div class="result-row">
+          <span class="label">Catatan:</span>
+          <span id="catatanHasil"></span>
+        </div>
+
+        <div id="peringatan" class="peringatan"></div>
+      </div>
+      <button onclick="goBack()">Kembali ke Halaman Input</button>
+    </div>
+
+    <script>
+      // Ambil data dari localStorage dan tampilkan di halaman hasil
+      window.onload = function () {
+        document.getElementById("waktuHasil").innerText = localStorage.getItem("waktuTes");
+        document.getElementById("jamTes").innerText = localStorage.getItem("jamTes");
+        document.getElementById("rendah").innerText = localStorage.getItem("perkiraanRendah");
+        document.getElementById("tinggi").innerText = localStorage.getItem("perkiraanTinggi");
+        document.getElementById("catatanHasil").innerText = localStorage.getItem("catatan");
+
+        const waktuTes = localStorage.getItem("waktuTes");
+        const perkiraanTinggi = parseFloat(localStorage.getItem("perkiraanTinggi"));
+        const perkiraanRendah = parseFloat(localStorage.getItem("perkiraanRendah"));
+        const peringatan = document.getElementById("peringatan");
+
+        // Menampilkan peringatan jika nilai lebih tinggi dari batas
+        if (
+          (waktuTes === "Bangun Tidur" && perkiraanTinggi > 130) ||
+          (waktuTes === "2 Jam Setelah Makan" && perkiraanTinggi > 179) ||
+          (waktuTes === "Sebelum Tidur" && perkiraanTinggi > 149)
+        ) {
+          peringatan.innerText = "ADA YANG HARUS DI EVALUASI";
+          peringatan.style.color = "red";
+        }
+      };
+
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

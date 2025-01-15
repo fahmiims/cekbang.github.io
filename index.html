@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catatan Gula Darah</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Catatan Gula Darah</h1>
+      <form id="gulaDarahForm">
+        <div class="form-group">
+          <label for="waktu">WAKTU PENGUKURAN:</label>
+          <select id="waktu" required>
+            <option value="Bangun Tidur">Bangun Tidur</option>
+            <option value="2 Jam Setelah Makan">2 Jam Setelah Makan</option>
+            <option value="Sebelum Tidur">Sebelum Tidur</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="nilai">Nilai Gula Darah:</label>
+          <input type="number" id="nilai" placeholder="Masukkan Nilai Gula Darah" required />
+        </div>
+
+        <div class="form-group">
+          <label for="catatan">Catatan (Opsional untuk 2 Jam Setelah Makan):</label>
+          <textarea id="catatan" placeholder="Tambahkan Catatan Anda (Jika Ada)"></textarea>
+        </div>
+
+        <button type="submit">Hitung Perkiraan</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
