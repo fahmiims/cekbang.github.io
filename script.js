@@ -7,7 +7,7 @@ document.getElementById("gulaDarahForm").addEventListener("submit", function (ev
   
     // Perhitungan perkiraan gula darah
     const perkiraanRendah = (nilaiGula * 1.1).toFixed(2);
-    const perkiraanTinggi = (nilaiGula * 1.15).toFixed(2);
+    const perkiraanTinggi = (nilaiGula * 1.12).toFixed(2);
   
     // Simpan data ke localStorage
     localStorage.setItem("waktuTes", waktu);
